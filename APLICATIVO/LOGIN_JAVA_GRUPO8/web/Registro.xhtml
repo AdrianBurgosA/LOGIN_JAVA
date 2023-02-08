@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Registro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <script src="https://www.google.com/recaptcha/api.js" async="async" defer="defer"></script>
+    </h:head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <h:graphicImage class="logo-imagen" library="images" name="logo.png" width="80"></h:graphicImage>
+            </div>
+            <h2>Registro</h2>
+            <h:form>
+                <table>
+                    <tr>
+                        <td>
+                            <h:inputText a:placeholder="Cédula"  id="cedula" value="#{empleado.cedula}"></h:inputText>
+                            <h:message for="cedula"></h:message>
+                        </td>
+                        <td>
+                            <h:inputText a:placeholder="Nombre"  id="nombre" value="#{empleado.nombre}"></h:inputText>
+                            <h:message for="nombre"></h:message>
+                        </td>
+                    </tr><br/>
+                    <tr>
+                        <td>
+                            <h:inputText a:placeholder="Apellido Paterno"  id="apellido_paterno" value="#{empleado.apellido_paterno}"></h:inputText>
+                            <h:message for="apellido_paterno"></h:message>
+                        </td>
+                        <td>
+                            <h:inputText a:placeholder="Apellido Materno"  id="apellido_materno" value="#{empleado.apellido_materno}"></h:inputText>
+                            <h:message for="apellido_materno"></h:message>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:inputText a:placeholder="Correo Electrónico"  id="correo" value="#{usuarioBean.correo}"></h:inputText>
+                            <h:message for="correo"></h:message>
+                        </td>
+                        <td>
+                            <h:inputText a:placeholder="Usuario"  id="usuario" value="#{usuarioBean.usuario}"></h:inputText>
+                            <h:message for="usuario"></h:message>
+                        </td>
+                    </tr>
+                </table><br/><br/>
+                <div class="g-recaptcha" data-sitekey="6LdzY2MkAAAAAH9vanVOyPDQsCFedWt6_WGl-aVW"></div>
+                <center>
+                    <div class="botones">
+                        <h:commandButton class="boton-login boton" action="#{controladorPrincipal.registro(empleado.cedula,empleado.nombre, empleado.apellido_materno,empleado.apellido_paterno, usuarioBean.usuario,usuarioBean.correo)}" value="Registrarse"></h:commandButton><br/><br/>   
+                        <h:commandButton class="boton-registro boton" action="index" value="Volver"></h:commandButton><br/><br/>   
+                    </div>
+                </center>
+            </h:form>
+        </div>        
+    </body>
+</html>

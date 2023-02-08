@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Cambio de contraseña</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <h:graphicImage class="logo-imagen" library="images" name="logo.png" width="80"></h:graphicImage>
+            </div>
+            <h2>Cambio de contraseña</h2>
+            <h:form>
+                <table>
+                    <tr>
+                        <td>
+                            <h:inputSecret a:placeholder="Contraseña nueva"  id="passnueva" value="a"></h:inputSecret>
+                            <h:message for="passnueva"></h:message>
+                        </td>
+                    </tr><br/>
+                    <tr>
+                        <td>
+                            <h:inputSecret a:placeholder="Ingrese de nuevo su contraseña" id="confpassnueva" value="a"></h:inputSecret>
+                            <h:message for="confpassnueva"></h:message>
+                        </td>
+                    </tr>
+                </table><br/><br/>
+                <div class="botones">
+                    <h:commandButton class="boton-login boton" action="a" value="Cambiar"></h:commandButton><br/><br/>
+                </div>
+            </h:form>
+        </div>       
+    </body>
+</html>

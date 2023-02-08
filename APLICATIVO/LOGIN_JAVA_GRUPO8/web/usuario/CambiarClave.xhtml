@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    
+    <h:head>
+        <title> Página de inicio de sesión</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="logo">
+                <h:graphicImage class="logo-imagen" library="images" name="logo.png" width="80"></h:graphicImage>
+            </div>
+            <h2>Actualización de contraseña</h2>
+            <h:form>
+                <center>                    
+                    <table>
+                        <tr>
+                            <td>
+                                <h:inputSecret a:placeholder="Contraseña" id="password" value="#{usuarioBean.password}" ></h:inputSecret>
+                                <h:message for="password"></h:message>
+                            </td>
+                        </tr><br/>
+                        <tr>
+                            <td>
+                                <h:inputSecret a:placeholder="Repetir Contraseña" id="Repitepassword" value="#{usuarioBean.repetirPassword}" ></h:inputSecret>
+                                <h:message for="Repitepassword"></h:message>
+                            </td>
+                        </tr>
+                    </table><br/><br/>
+                </center>
+                <div class="botones">
+                    <h:commandButton class="boton-login boton" action="#{controladorPrincipal.actualizarClave(usuarioBean.password, usuarioBean.repetirPassword, usuarioBean.usuario)}" value="Actualizar"></h:commandButton><br/><br/>
+                </div>
+            </h:form>
+        </div>        
+    </h:body>
+</html>
+

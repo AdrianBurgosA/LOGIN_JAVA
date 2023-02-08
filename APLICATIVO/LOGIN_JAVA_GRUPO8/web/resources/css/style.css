@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 5, 2023, 8:11:58 PM
+    Author     : aburg
+*/
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient(149deg, rgba(39,57,80,1) 0%, rgba(255,255,255,1) 0%, rgba(19,98,216,1) 57%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container{
+    height: 100%;
+    margin: 5% auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 50px;
+    width: max-content;
+    background-color: white;
+    color: rgb(19,98,216);
+}
+.logo{
+    width: max-content;
+    margin: 0 auto;
+}
+.botones{
+    width: max-content;
+    margin: 0 auto;
+}
+.logo-imagen{
+    margin: 0 auto;
+}
+.boton-registro{
+    border: 2px solid rgb(19,98,216);
+    border-radius: 5px;
+    color: rgb(19,98,216);
+}
+.boton-login{
+    border: 2px solid rgb(19,98,216);
+    border-radius: 5px;
+    background-color: rgb(19,98,216);
+    color: white;
+}
+.boton{
+    padding: 5px;
+    width: 100%;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Inicio</title>
+        <h:outputStylesheet library="css" name="usuario.css"/>
+    </h:head>
+    <h:body>
+        <div class="contenedor">
+            <div class="izquierda">
+                <div class="cabecera">
+                    <br/><br/>
+                    <center>
+                        <h:graphicImage library="images" name="perfil.png" width="64"></h:graphicImage><br/>
+                        <h:outputText value="Bienvenido  "/>
+                        <h:outputText value="#{usuarioBean.usuario}"/>
+                    </center>
+                </div>
+            </div>
+            <div class="derecha">hola</div>
+        </div>
+    </h:body>
+</html>
