@@ -34,16 +34,7 @@ public class Usuario implements Serializable{
     public Usuario(){
         
     }
-    /*public Usuario(String empleadoId, String usuario, String estadoCodigo, String password, Date fechaCreacion, Date fechaModificacion, boolean claveTemporal, String correo){
-        this.empleadoId = empleadoId;
-        this.usuario = usuario;
-        this.estadoCodigo = estadoCodigo;
-        this.password = password;
-        this.fechaCreacion = fechaCreacion;
-        this.fechaModificacion = fechaModificacion;
-        this.claveTemporal = claveTemporal;
-        this.correo = correo;
-    }*/       
+    
 
     public String getRepetirPassword() {
         return repetirPassword;
